@@ -1,0 +1,22 @@
+type Query {
+    bookById(id: ID): Book
+    studentById(id: ID): Student
+    reservationById(id: ID): Reservation
+}
+
+type Book {
+    id: ID!
+    name: String
+    isbn: String
+}
+
+type Student {
+    id: ID!
+    name: String
+}
+
+type Reservation {
+    id: ID!
+    book: Book
+    student: Student
+}
