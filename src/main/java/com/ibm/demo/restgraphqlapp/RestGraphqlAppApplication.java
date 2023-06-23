@@ -9,17 +9,6 @@ import java.io.PrintStream;
 
 @SpringBootApplication
 public class RestGraphqlAppApplication {
-
-	static {
-		File file = new File("./stdout.log");
-		PrintStream stream = null;
-		try {
-			stream = new PrintStream(file);
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		}
-		System.setOut(stream);
-	}
 	public static void main(String[] args) {
 		SpringApplication.run(RestGraphqlAppApplication.class, args);
 	}
